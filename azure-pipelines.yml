@@ -27,3 +27,6 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: WhiteSource Bolt@20
+      inputs:
+        cwd: '$(System.DefaultWorkingDirectory)'
